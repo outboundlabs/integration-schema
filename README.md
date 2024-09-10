@@ -1,2 +1,0 @@
-# integration-schema
-integration schema

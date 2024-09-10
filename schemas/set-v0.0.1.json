@@ -1,0 +1,39 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"description": "Core set operation",
+	"$id": "https://integration-schema.outboundlabs.com/set-v0.0.1",
+	"properties":
+	{
+		"setContacts":
+		{
+			"$ref": "#/definitions/setContactCollection"
+		},
+		"deleteContacts":
+		{
+			"description": "delete contacts by internal or external id",
+			"$ref": "#/definitions/identityFilter"
+		},
+		"setContactLists":
+		{
+			
+		}, "deleteContactLists":
+		{
+			
+		}, "setComapnies":{},
+		"deleteCompanies":{},
+		"setEvents": {},
+		"deleteEvents": {}
+	},
+	"definitions": {
+		"identityFilter":{
+			"type": "array",
+			"items":{"type": "string"}
+		},
+		"setContactCollection":{
+			"type":"array",
+			"items":{
+				"$ref": "https://integration-schema.outboundlabs.com/set-contact-v0.0.1"	
+			}
+		}
+	}
+}
